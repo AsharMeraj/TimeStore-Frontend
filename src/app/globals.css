@@ -3,31 +3,171 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --Primary-Color: rgb(0, 105, 255);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.height {
+  min-height: calc(100vh - 6.4rem);
+}
+
+.Navheight {
+  min-height: calc(100vh - 1rem);
+}
+
+
+
+.width {
+  width: calc(100vw);
+}
+
+.before::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  height: 100%;
+  backdrop-filter: blur(20px);
+}
+
+
+
+.bg-background {
+  background-Image: url("/template/public/Images/watch.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.animate {
+  animation: animate 2s infinite linear;
+}
+
+
+@keyframes animate {
+  0% {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  50% {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+
+  }
+
+  100% {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+}
+
+
+/* #shop:hover #submenu {
+  display: block;
+} */
+
+
+
+/* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION START */
+.productCarousel.carousel-root {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.productCarousel.carousel-root .carousel {
+  width: auto;
+}
+.productCarousel.carousel-root .carousel.carousel-slider {
+  width: 100%;
+}
+.productCarousel.carousel-root .carousel.carousel-slider .slider-wrapper {
+  border-radius: 10px;
+}
+.productCarousel.carousel-root .carousel .thumbs-wrapper {
+  margin: 0;
+  height: fit-content;
+}
+.productCarousel.carousel-root .carousel .thumb {
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.productCarousel.carousel-root .carousel .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.productCarousel.carousel-root .carousel .thumb:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+}
+.productCarousel.carousel-root .carousel .thumb.selected,
+.productCarousel.carousel-root .carousel .thumb:hover {
+  border: 0;
+}
+.productCarousel.carousel-root .carousel .thumb:hover:after,
+.productCarousel.carousel-root .carousel .thumb.selected:after {
+  opacity: 0.2;
+}
+.productCarousel .control-arrow {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .productCarousel.carousel-root {
+      flex-direction: column;
+  }
+  .productCarousel.carousel-root .carousel .thumb {
+      border: 0;
+      padding: 0;
+  }
+  .productCarousel.carousel-root .carousel .thumbs-wrapper {
+    margin: auto;
+    width: fit-content;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media screen and (min-width: 768px) {
+  .productCarousel.carousel-root .carousel .thumbs {
+      transform: none !important;
+      flex-direction: column;
+      display: flex;
+      gap: 10px;
+  }
+  .productCarousel.carousel-root .carousel .thumb {
+      border: 0;
+      padding: 0;
+      margin: 0;
   }
 }
+/* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION END */
+
+.react-multi-carousel-item{
+  width: fit-content;
+}
+
+
+
+
+
+
+
+
+
+

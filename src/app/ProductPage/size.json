@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "size": "24 mm",
+            "enabled": true
+        },
+        {
+            "size": "28 mm",
+            "enabled": true
+        },
+        {
+            "size": "32 mm",
+            "enabled": true
+        },
+        {
+            "size": "36 mm",
+            "enabled": true
+        },
+        {
+            "size": "40 mm",
+            "enabled": true
+        },
+        {
+            "size": "44 mm",
+            "enabled": true
+        },
+        {
+            "size": "48 mm",
+            "enabled": true
+        },
+        {
+            "size": "52 mm",
+            "enabled": true
+        },
+        {
+            "size": "54 mm",
+            "enabled": true
+        }
+    ]
+}
