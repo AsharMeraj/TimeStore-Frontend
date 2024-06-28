@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Provider } from 'react-redux';
 import store from '../Store/store';
 import LoadingBar from 'react-top-loading-bar';
-import {useRouter, usePathname, useSearchParams} from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
 
 
@@ -16,7 +16,7 @@ const StoreWrapper = ({ children, }: Readonly<{ children: React.ReactNode; }>) =
     setProgress(30);
     const timer = setTimeout(() => {
       setProgress(100);  // Finish loading after a delay
-    },200); // Adjust the delay as needed
+    }, 200); // Adjust the delay as needed
 
     return () => {
       clearTimeout(timer);  // Clear timeout on cleanup
@@ -25,13 +25,15 @@ const StoreWrapper = ({ children, }: Readonly<{ children: React.ReactNode; }>) =
 
   return (
     <Provider store={store}>
-      <LoadingBar
-        color='rgb(0, 105, 255)'
-        progress={progress}
-        waitingTime={200}
-        height={3}
-      />
-      {children}
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoadingBar
+          color='rgb(0, 105, 255)'
+          progress={progress}
+          waitingTime={200}
+          height={3}
+        />
+        {children}
+      </Suspense>
     </Provider>
   )
 }
