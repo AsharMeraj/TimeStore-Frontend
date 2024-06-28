@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import StoreWrapper from "./Provider/StoreWrapper";
+import { Suspense } from "react";
 
 
 
@@ -19,11 +20,13 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en">
 
       <body className={inter.className}>
-        <StoreWrapper>
-          <Navbar />
-          {children}
-          <Footer />
-        </StoreWrapper>
+        <Suspense fallback={<div>Loading...</div>}>
+          <StoreWrapper>
+            <Navbar />
+            {children}
+            <Footer />
+          </StoreWrapper>
+        </Suspense>
       </body>
     </html>
   );

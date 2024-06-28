@@ -25,7 +25,6 @@ const StoreWrapper = ({ children, }: Readonly<{ children: React.ReactNode; }>) =
 
   return (
     <Provider store={store}>
-      <Suspense fallback={<div>Loading...</div>}>
         <LoadingBar
           color='rgb(0, 105, 255)'
           progress={progress}
@@ -33,7 +32,6 @@ const StoreWrapper = ({ children, }: Readonly<{ children: React.ReactNode; }>) =
           height={3}
         />
         {children}
-      </Suspense>
     </Provider>
   )
 }
