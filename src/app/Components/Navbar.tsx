@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react'
 import MobileNavbar from './MobileNavbar';
-
 import NavComponent from './NavComponent';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 

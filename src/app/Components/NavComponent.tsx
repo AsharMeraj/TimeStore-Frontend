@@ -59,7 +59,7 @@ const NavComponent = (props: PropType) => {
                             <h2 className='absolute top-0 translate-y-[-70%] translate-x-[10px] text-[0.9rem] text-[--Primary-Color]'>&#9650;</h2>
                             <Linked href={"/AllProducts"} className='hover:text-[--Primary-Color] text-black duration-200 cursor-pointer'>All watches</Linked>
                             {
-                                data?.data?.map((item) => {
+                                data?.data.map((item) => {
                                     return <Linked key={item.id} href={`/shop/${item.attributes.name}`} className='hover:text-[--Primary-Color] text-black duration-200 cursor-pointer'>{item.attributes.name}</Linked>
                                 })
                             }

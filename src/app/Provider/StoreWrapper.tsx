@@ -1,5 +1,5 @@
 'use client'
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Provider } from 'react-redux';
 import store from '../Store/store';
 import LoadingBar from 'react-top-loading-bar';

@@ -20,7 +20,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en">
 
       <body className={inter.className}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className="w-full h-screen flex items-center justify-center text-[2rem]">Loading...</div>}>
           <StoreWrapper>
             <Navbar />
             {children}
