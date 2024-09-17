@@ -67,7 +67,7 @@ const HomePage = () => {
             ease: 'easeInOut'
           }}
         >
-          <Image alt='/' className=' h-full w-full rounded-br-[45%] rounded-bl-[56%]' src={watch} />
+          <Image alt='/' className=' h-full w-full rounded-br-[45%] rounded-bl-[56%]' priority={true} src={watch} />
         </MotionSpan>
       </main>
 

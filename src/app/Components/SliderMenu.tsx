@@ -2,7 +2,6 @@ import Button from './Button/Button';
 import Link from 'next/link';
 import { fetchData } from '../utils/api';
 import { Main } from '../ProductPage/ProductList/ProductType';
-import RelatedProducts from '@/app/AllProducts/[id]/RelatedProducts';
 import RelatedAllProd from './RelatedAllProd';
 
 
@@ -23,13 +22,6 @@ const SliderMenu = async () => {
     </main>
   )
 }
-// export async function getServerSideProps() {
-//   const products: Main = await fetchData('/api/products?populate=*');
-//   console.log("yahan tak to chal gaya")
-//   return {
-//     props: { products }
-//   };
-// }
 
 
 export default SliderMenu

@@ -8,10 +8,6 @@ import { fetchData } from '../utils/api';
 import { Main } from '../ProductPage/ProductList/CategoryType';
 import { useQuery } from '@tanstack/react-query';
 import { useAppSelector } from '../Store/hooks';
-// import { useDispatch, useSelector } from 'react-redux'
-// import { RootState } from '@/app/Store/Store';
-// import { motion } from 'framer-motion';
-// import { getCartTotal } from '@/app/Store/Slice/cartSlice';
 type ChildType = {
     showMobileNav: boolean,
     setShowMobileNav: React.Dispatch<React.SetStateAction<boolean>>
