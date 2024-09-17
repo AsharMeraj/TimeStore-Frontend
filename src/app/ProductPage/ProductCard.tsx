@@ -9,7 +9,7 @@ import { MainDatum } from './ProductList/ProductType'
 const ProductCard = ({data}:{data:MainDatum}) => {
     return (
         <div className='w-fit m-auto focus:outline-none hover:scale-105 duration-200 cursor-pointer'>
-            <Link href={`/AllProducts/${data.id}`} as={`/AllProducts/${data.id}`}>
+            <Link href={`/AllProducts/${data.id}`} prefetch={false}>
                 <Image className='max-[320px]:w-[12rem] w-[14rem] sm:w-[18rem] bg-[rgb(246,246,246)] border-b-4 border-[--Primary-Color] m-auto' alt='' width={600} height={600} src={`${data.attributes.thumbnail.data.map(data => data.attributes.url)}`} />
                 <h2 className='max-[320px]:w-[12rem] w-[14rem] sm:w-[16rem] font-semibold text-[1rem] max-[840px]:text-[1rem] mt-4'>
                     {data.attributes.name}
