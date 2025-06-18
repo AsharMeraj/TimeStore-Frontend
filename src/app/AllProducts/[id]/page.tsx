@@ -88,6 +88,7 @@ interface ProductPageProps {
 // Async component for server-side data fetching
 const ProductPage = async ({ params }: ProductPageProps) => {
   const products: Main = await fetchData('/api/products?populate=*')
+  console.log(products)
   const productFunction = (id: number) => {
     return products.data.filter((product: MainDatum) => (
       product.id === +id
